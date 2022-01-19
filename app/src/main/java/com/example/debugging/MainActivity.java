@@ -34,21 +34,18 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Menu.class);
                     startActivity(intent);
                     finish();
-                }
-                else
-                {
+                } else {
                     //Toast.makeText(MainActivity.this, "A név mezőt kötelező kitölteni!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    public void init()
-    {
+    public void init() {
         editTextName = findViewById(R.id.editTextName);
-        buttonBelepes = findViewById(R.id.buttonNext);
+        buttonBelepes = findViewById(R.id.buttonBelepes);
         SharedPreferences sharedPreferences = getSharedPreferences("Adatok", Context.MODE_PRIVATE);
         String seged = "";
-        seged = sharedPreferences.getString("nev","Nincs elmentve a neved!");
+        seged = sharedPreferences.getString("nev", "Nincs elmentve a neved!");
     }
 }
